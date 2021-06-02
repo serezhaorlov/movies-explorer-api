@@ -10,7 +10,7 @@ const { handleErrors } = require('./middlewares/handleErrors');
 const { DEV_DATA_BASE_PATH } = require('./utils/config');
 
 const app = express();
-const { PORT = 3000, NODE_ENV, PRODUCTION_DATA_BASE_PATH } = process.env;
+const { PORT = 3001, NODE_ENV, PRODUCTION_DATA_BASE_PATH } = process.env;
 
 mongoose.connect(NODE_ENV === 'production' ? PRODUCTION_DATA_BASE_PATH : DEV_DATA_BASE_PATH, {
   useNewUrlParser: true,

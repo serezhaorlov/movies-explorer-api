@@ -47,9 +47,10 @@ const createMovie = (req, res, next) => {
     nameRU,
     nameEN,
   })
-    .then(() => {
+    .then((movie) => {
       res.status(200).send({
         message: SUCCSESS_CREATE_MESSAGE,
+        newMovie: movie,
       });
     })
     .catch((err) => {
